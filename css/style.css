@@ -1,3 +1,6 @@
+    body { background:#eee; margin:0 }
+	svg { position:fixed; top:0; left:0; height:100%; width:100% }
+
 .container {
 	padding-right: 15px;
  	padding-left: 15px;
@@ -6,9 +9,37 @@
 	max-width: 1170px;
 }
 
-#path1{
-  stroke: yellow;
-  stroke-width: 4px;
+#dialogset {
+	width: 200px;
+	max-width: 200px;
+    /*visibility: hidden;*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    overflow-y: auto;
 
-  
+}
+
+#dialog {
+    font-family: cabin;
+    color: black;
+	max-width: 400px;
+	font-size: 13px;
+    background-color: #7277DD;
+    border: 3px solid;
+    border-color: #21184A; 
+    padding: 15px;
+}
+
+#title {
+	font-family: cabin;
+    background-color: #21184A;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
 }

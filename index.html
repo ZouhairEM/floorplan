@@ -7,39 +7,101 @@
         Floorplan
     </title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
-    </script>
+    <script src="js/plugin.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/tweenmax.js"></script>
 </head>
 
 <body>
-	<div class="container">
-		<svg version="1.1"
-		 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-		 x="0px" y="0px" width="357.679px" height="276.921px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921"
-		 xml:space="preserve">
-		  <a xlink:href="http://ja.wikipedia.org/wiki/%E5%8C%97%E6%B5%B7%E9%81%93">
-			<path id="path1" fill="#FFCC33" d="M302.39,0.046c-12.921-1.436-15,31-22,41s-24,19-24,24s-5,24.319,18,21.319s-1-14.319,10-15.319s26,5,43,5
-			s11-18,20-21s21-17-8-23C316.031,27.213,320.39,2.046,302.39,0.046z"/>
-		  </a>
+    <div class="container">
+        <div id="chair1">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="0" cy="50" fill="blue"/></a><svg></div>
 
-		  <a xlink:href="http://ja.wikipedia.org/wiki/%E6%9C%AC%E5%B7%9E">
-			<path fill="#00BBAA" d="M287.39,94.046c-6.083,0,3,18-6,18s-8-9-16-9s-8,61-19,70s-42,20.206-45,13.603s18-14.366,6.476-20.913
-			c-8.858-5.032-29.476,32.31-40.476,32.31s-89-5-97,0s-3,24.138,9,27.569c12,3.431,56-5.431,64,0c8,5.431-12,18.431-4,23.431
-			s44-4,57-8s8-11.862,19-12.431c11-0.569,16,20.431,41,17.431s9.105-29,31.053-30c21.947-1,4.947,19,11.947,19s15-8.968,15-27.484
-			s-14-25.137-14-41.826s10.957-15.69,4.979-39.69C299.39,102.046,297.39,94.046,287.39,94.046z"/>
-		  </a>
+        <div id="chair2">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="50" cy="50" fill="blue"/></a><svg></div>
 
-		  <a xlink:href="http://ja.wikipedia.org/wiki/%E5%9B%9B%E5%9B%BD">
-			<path fill="#33CCFF" d="M115.39,228.615c-10.281-3.107-37,6.431-39,11.431s5,17,14,17s38-0.04,38-14.52
-			C128.39,228.046,115.39,228.615,115.39,228.615z"/>
-		  </a>
+        <div id="chair3">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="100" cy="50" fill="blue"/></a><svg></div>
 
-		  <a xlink:href="http://ja.wikipedia.org/wiki/%E4%B9%9D%E5%B7%9E">
-			<path fill="#FF9999" d="M43.39,207.562c-13.875-1.94-51,9.484-42,26.484s23-8.081,29-6.04c6,2.04-0.394,22.04-8.697,33.04
-			c-8.303,11,5.697,13,11.697,11s17,11.372,27,0.686s12.222-18.686,6.111-39.686C60.39,212.046,61.39,210.079,43.39,207.562z"/>
-		  </a>
-		</svg>
-	</div>
+        <div id="chair4">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="150" cy="50" fill="blue"/></a><svg></div>
+
+        <div id="chair5">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="200" cy="50" fill="blue"/></a><svg></div>
+
+        <div id="chair6">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="250" cy="50" fill="blue"/></a><svg></div>
+
+        <div id="chair7">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="300" cy="50" fill="blue"/></a><svg></div>
+
+        <div id="chair8">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="0" cy="100" fill="blue"/></a><svg></div>
+
+        <div id="chair9">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="50" cy="100" fill="blue"/></a><svg></div>
+
+        <div id="chair10">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="100" cy="100" fill="blue"/></a><svg></div>
+
+        <div id="chair11">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="150" cy="100" fill="blue"/></a><svg></div>
+
+        <div id="chair12">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="200" cy="100" fill="blue"/></a><svg></div>
+
+        <div id="chair13">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="250" cy="100" fill="blue"/></a><svg></div>
+
+        <div id="chair14">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
+                <a xlink:href="#"><circle class="chair1" r="20" cx="300" cy="100" fill="blue"/></a><svg></div>
+
+    </div>
+    <div id="dialogset">
+        <div id="title"></div>
+        <div id="dialog"></div>
+    </div>
+    <script>
+    var availableChairs = ["chair1", "chair2", "chair3", "chair4, chair5", "chair6", "chair7", "chair8, chair9", "chair10", "chair11", "chair12", "chair13", "chair14"  ];
+    var availableTables = ["table1", "table2", "table3", "table4"];
+
+    
+    var randomChair = availableChairs[Math.floor(Math.random() * availableChairs.length)];
+    var randomTable = availableTables[Math.floor(Math.random() * availableTables.length)];
+    var highLightChair = new highLight();
+    highLightChair.animate(randomChair);
+
+    var title, message;
+    var chairNumber = randomChair.substr(randomChair.length - 1);
+    var tableNumber = randomTable.substr(randomTable.length - 1);
+
+    title = "Seat no. " + chairNumber + " is yours";
+    message = "It's located here, at table number " + tableNumber + ". It'll be reserved for you at the Study Session of 20th april.";
+    $("#dialog").html(message);
+    $("#title").html(title);
+
+     TweenMax.to($("#dialogset"), 1, {
+                visibility: 'visible',
+                xPercent: '100',
+                yPercent: '50',
+                ease: Back.easeOut
+            });
+
+    </script>
 </body>
 
 </html>
