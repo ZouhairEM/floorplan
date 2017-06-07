@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="floorplan.js"></script>
     <title>
-        Floorplan
+        Usertest
     </title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
-    </script>
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="container">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="357.679px" height="350px" viewBox="0 0 357.679 276.921" enable-background="new 0 0 357.679 276.921" xml:space="preserve">
             <defs>
@@ -27,6 +27,19 @@
             </a>
         </svg>
     </div>
+=======
+<div></div>
+    <script>
+        $('body').floorplan({
+            numofTables: 10, //Number of tables
+            bookedTables: [1,5, 7], //Specify which tables, remember: arrays count from 0
+            bookedSeats: {
+                tableNums: [4,8,9,9], //Be sure to match table elements with seat elements
+                seatNums: [1,2,0,1] //Seat elements.
+            }
+        });
+    </script>
+>>>>>>> view-reserved-seats
 </body>
 
 </html>
