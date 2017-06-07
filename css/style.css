@@ -6,9 +6,8 @@
 	max-width: 1170px;
 }
 
-#path1{
-  stroke: yellow;
+.path1{
+  stroke: gold;
   stroke-width: 4px;
-
-  
+  fill: brown;
 }
