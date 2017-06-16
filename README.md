@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/master
 # Floorplan
 This is a plugin that allows you to create visualized tables to easily show which tables and seats are already booked for your events.
 
@@ -56,3 +57,6 @@ Add floorplan to your page with this code. You can set your own number of tables
     * Some code still needs to be made more efficiently
     * I wanna work with real JSON objects to load data in
     * I want to append Floorplan to specific divs, while keeping CSS aspect ratios.
+=======
+frameworkfloorplan
+>>>>>>> Divs create function in new repo

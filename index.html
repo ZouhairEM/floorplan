@@ -8,6 +8,7 @@
     <title>
         Usertest
     </title>
+<<<<<<< refs/remotes/origin/master
 </head>
 
 <body>
@@ -40,6 +41,30 @@
         });
     </script>
 >>>>>>> view-reserved-seats
+=======
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" value="">
+    <br>
+    <button id="input">Add your amount of tables</button>
+    <br>
+    <button id="check">Check booked tables</button>
+
+    <script>
+    $("#input").click(function() {
+        x = [];
+        $('input[type="text"]').each(function() {
+            x.push($(this).val());
+        });
+
+        makeTable(x);
+    });
+    </script>
+    <script src="index.js"></script>
+>>>>>>> Divs create function in new repo
 </body>
 
 </html>
