@@ -51,20 +51,27 @@
     <br>
     <button id="input">Add your amount of tables</button>
     <br>
-    <button id="check">Check booked tables</button>
-
+    <button id="checkTables">Check available tables</button>
     <script>
-        // makeFloorPlan(5);
-    $("#input").click(function() {
+
+    input.addEventListener("click",function(e){
         x = [];
+        
         $('input[type="text"]').each(function() {
             x.push($(this).val());
         });
 
-    });
+        makeFloorPlan(x);
+},false);
     </script>
     <script src="index.js"></script>
 >>>>>>> Divs create function in new repo
 </body>
 
+<<<<<<< refs/remotes/origin/master
 </html>
+=======
+</html>
+
+
+>>>>>>> Made tables % based instead of pixels
