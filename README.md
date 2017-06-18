@@ -53,8 +53,9 @@ Add floorplan to your page with this code. You can set your own number of tables
 =======
 ### Add floorplan to a div
 Select any div and add floorplan to it like so,
+
 ```
-<div></div>
+    <div></div>
     <script>
         $('div').floorplan({
             numofTables: 10, //Number of tables
@@ -69,10 +70,14 @@ Select any div and add floorplan to it like so,
 ```
 ## Demo
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 [Live demo](http://mariami.nl/projects/floorplan/index.html)
 =======
 link not yet up
 >>>>>>> Added content to readme.md
+=======
+[mariami.nl/projects/floorplan/index.html](mariami.nl/projects/floorplan/index.html)
+>>>>>>> Final readme fix, promise
 
 ## Author(s)
 
