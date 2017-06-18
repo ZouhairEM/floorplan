@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        Floorplan
+        Floorplan plugin
     </title>
-    <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="floorplan.js"></script>
 </head>
 
 <body>
-<div></div>
-<script type="text/javascript">
-$('div').floorplan({numberofTables: 20});
-
-</script>
+    <div></div>
+    <script>
+        $('div').floorplan({
+            numofTables: 10, //Number of tables
+            bookedTables: [1,2], //Specify which tables, remember: arrays count from 0
+            bookedSeats: {
+                tableNums: [0, 0, 3], //Be sure to match elements
+                seatNums: [1, 2, 5]
+            }
+        });
+    </script>
 
 </body>
 
 </html>
-
-
