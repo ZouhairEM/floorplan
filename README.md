@@ -53,7 +53,8 @@ Add floorplan to your page with this code. You can set your own number of tables
 =======
 ### Add floorplan to a div
 Select any div and add floorplan to it like so,
-```<div></div>
+```
+<div></div>
     <script>
         $('div').floorplan({
             numofTables: 10, //Number of tables
@@ -80,6 +81,7 @@ link not yet up
 ## Acknowledgments
 
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 * Thank you [Ties](https://github.com/Indoguy) for some help
 * Future additions
     * Some code still needs to be made more efficiently
@@ -90,5 +92,8 @@ frameworkfloorplan
 >>>>>>> Divs create function in new repo
 =======
 * Thank you [Ties](https://github.com/https://github.com/Indoguy) for some help
+=======
+* Thank you [Ties](https://github.com/Indoguy) for some help
+>>>>>>> Fixed readme.md
 * Some code still needs to be made more efficiently
 >>>>>>> Added content to readme.md
