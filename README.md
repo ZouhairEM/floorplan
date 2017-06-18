@@ -27,8 +27,9 @@ Include the plugin within the head tag,
 
 ### Add floorplan to a div
 Select any div and add floorplan to it like so,
+
 ```
-<div></div>
+    <div></div>
     <script>
         $('div').floorplan({
             numofTables: 10, //Number of tables
@@ -41,7 +42,7 @@ Select any div and add floorplan to it like so,
     </script>
 ```
 ## Demo
-link not yet up
+[mariami.nl/projects/floorplan/index.html](mariami.nl/projects/floorplan/index.html)
 
 ## Author(s)
 
