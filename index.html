@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="floorplan.js"></script>
     <title>
+<<<<<<< refs/remotes/origin/master
         Usertest
     </title>
 <<<<<<< refs/remotes/origin/master
@@ -43,16 +44,26 @@
 >>>>>>> view-reserved-seats
 =======
     <link href="style.css" rel="stylesheet" type="text/css">
+=======
+        Floorplan plugin
+    </title>
+>>>>>>> 90% finished, added better style, text and settings in html div
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="floorplan.js"></script>
 </head>
 
 <body>
-<div></div>
-<script type="text/javascript">
-$('div').floorplan({numberofTables: 20});
-
-</script>
+    <div></div>
+    <script>
+        $('div').floorplan({
+            numofTables: 10, //Number of tables
+            bookedTables: [1,2], //Specify which tables, remember: arrays count from 0
+            bookedSeats: {
+                tableNums: [0, 0, 3], //Be sure to match elements
+                seatNums: [1, 2, 5]
+            }
+        });
+    </script>
 
 <<<<<<< refs/remotes/origin/master
         makeFloorPlan(x);
@@ -65,9 +76,13 @@ $('div').floorplan({numberofTables: 20});
 </body>
 
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 </html>
 =======
 </html>
 
 
 >>>>>>> Made tables % based instead of pixels
+=======
+</html>
+>>>>>>> 90% finished, added better style, text and settings in html div
