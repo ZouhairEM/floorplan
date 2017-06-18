@@ -1,26 +1,32 @@
-(function makeFloorPlan() {
-  var defaultSettings = {
-    numberofTables: 10, //number of tables 
+(function ($) {
+    $.fn.floorplan = function(options){ 
+
+  var settings = $.extend({
+    numberofTables: 8, //number of tables 
     tablePos: { posX: 17, posY: 10 },
     tableSize: { tableW: 12, tableH: 12 },
-    takenTables: [2,5,6], //place your taken tables here like so
-    takenSeats: [{'1': '5'}], //place table # and then its seat(s) number(s)
-    scrollsectionPos: { posX: 20, posY: 80 },
+    takenTables: [2], //place your taken tables here like so [2,4] for tables #3 and #5
+    takenSeats: {
+    tableNum: [3], 
+    seatNum: [0]}, //place table # and then its seat(s) number(s)
     seatSize: { seatW: 10, seatH: 10 }, //seatSize
     speed: 1000 // tables fade in with this speed
-  };
-  
-  function createTables() {
-    var availableTables = [], newTable, tableProp;
-    for (var i = 0; i < defaultSettings.numberofTables; i++) {
-      newTable = $('<div id="table' + i + '"></div').css({ 'width': defaultSettings.tableSize.tableW + '%', 'height': defaultSettings.tableSize.tableH + '%', 'background-color': 'black' });
-      tableProp = { 'left': defaultSettings.tablePos.posX + '%', 'top': defaultSettings.tablePos.posY + '%', 'position': 'absolute', 'display': 'none' };
+  }, options);
 
-      var availableSeats = createSeats(i);
-      if (defaultSettings.tablePos.posX >= 60) {
-        defaultSettings.tablePos.posX = 17, defaultSettings.tablePos.posY += 30;
-      } else { defaultSettings.tablePos.posX += 18; }
-      newTable.css(tableProp).appendTo('body').fadeIn(defaultSettings.speed);
+//global declarations
+    var availableTables = [], availableSeats = [], newTable, tableProp, seatPosX, seatPosY;
+
+  function createTables() {
+
+    for (var i = 0; i < settings.numberofTables; i++) {
+      newTable = $('<div id="table' + i + '"></div').css({ 'width': settings.tableSize.tableW + '%', 'height': settings.tableSize.tableH + '%', 'background-color': 'black' });
+      tableProp = { 'left': settings.tablePos.posX + '%', 'top': settings.tablePos.posY + '%', 'position': 'absolute', 'display': 'none' };
+      availableSeats = createSeats(i);
+
+      if (settings.tablePos.posX >= 60) {
+        settings.tablePos.posX = 17, settings.tablePos.posY += 30;
+      } else { settings.tablePos.posX += 18; }
+      newTable.css(tableProp).appendTo('body').fadeIn(settings.speed);
       availableTables.push(newTable);
     
     }
@@ -28,42 +34,47 @@
   }
 
   function createSeats(tablePos) {
-    var availableSeats = []; 
-    var seatPosX, seatPosY;
     var horPosArr = new Array(0, 5, 10);
     for (var j = 0; j < 6; j++) {
       if (j < 3) {
-        seatPosX = defaultSettings.tablePos.posX + horPosArr[j];
-        seatPosY = defaultSettings.tablePos.posY + 14;
+        seatPosX = settings.tablePos.posX + horPosArr[j];
+        seatPosY = settings.tablePos.posY + 14;
       } else {
-        seatPosX = defaultSettings.tablePos.posX + horPosArr[j - 3];
-        seatPosY = defaultSettings.tablePos.posY - 4.5;
+        seatPosX = settings.tablePos.posX + horPosArr[j - 3];
+        seatPosY = settings.tablePos.posY - 4.5;
       }
 
-      var newSeat = $('<div class="table' + tablePos + 'seat' + j + '"></div').css({ 'width': defaultSettings.seatSize.seatW, 'height': defaultSettings.seatSize.seatH, 'background-color': 'white', 'border': 'solid black 2px' });
+      var newSeat = $('<div class="table' + tablePos + 'seat' + j + '"></div').css({ 'width': settings.seatSize.seatW, 'height': settings.seatSize.seatH, 'background-color': 'white', 'border': 'solid black 2px' });
       var seatProp = { 'left': seatPosX + 0.5 + '%', 'top': seatPosY + '%', 'position': 'absolute', 'display': 'none' };
-      newSeat.css(seatProp).appendTo('body').fadeIn(defaultSettings.speed);
+      newSeat.css(seatProp).appendTo('body').fadeIn(settings.speed);
       availableSeats.push(newSeat);
     }
     return availableSeats;
   }
-  var availableTables = createTables();
+    availableTables = createTables();
 
-    checkTables.addEventListener("click", function(e) {
-        for (var i = 0; i < defaultSettings.takenTables.length; i++) {
-            $("#table" + defaultSettings.takenTables[i]).fadeTo(defaultSettings.speed, 0.10);
-            $(".table" + defaultSettings.takenTables[i] + 'seat' + [0]).fadeTo(defaultSettings.speed, 0.10);
-            $(".table" + defaultSettings.takenTables[i] + 'seat' + [1]).fadeTo(defaultSettings.speed, 0.10);
-            $(".table" + defaultSettings.takenTables[i] + 'seat' + [2]).fadeTo(defaultSettings.speed, 0.10);
-            $(".table" + defaultSettings.takenTables[i] + 'seat' + [3]).fadeTo(defaultSettings.speed, 0.10);
-            $(".table" + defaultSettings.takenTables[i] + 'seat' + [4]).fadeTo(defaultSettings.speed, 0.10);
-            $(".table" + defaultSettings.takenTables[i] + 'seat' + [5]).fadeTo(defaultSettings.speed, 0.10);
-
-            $(".table2seat5").css({'background-color': 'red'});
+function checkSeats(){
+        for (var i = 0; i < settings.takenTables.length; i++) {
+            $("#table" + settings.takenTables[i]).fadeTo(settings.speed, 0.10);
+            $(".table" + settings.takenTables[i] + 'seat' + [0]).fadeTo(settings.speed, 0.10);
+            $(".table" + settings.takenTables[i] + 'seat' + [1]).fadeTo(settings.speed, 0.10);
+            $(".table" + settings.takenTables[i] + 'seat' + [2]).fadeTo(settings.speed, 0.10);
+            $(".table" + settings.takenTables[i] + 'seat' + [3]).fadeTo(settings.speed, 0.10);
+            $(".table" + settings.takenTables[i] + 'seat' + [4]).fadeTo(settings.speed, 0.10);
+            $(".table" + settings.takenTables[i] + 'seat' + [5]).fadeTo(settings.speed, 0.10);
+            
+            var tN = settings.takenSeats.tableNum[i], sN = settings.takenSeats.seatNum[i];
+            $(".table" + tN + 'seat' + sN).fadeTo(settings.speed, 0.10);
         }
-    }, false);
+} 
+checkSeats();
+    
+return ({
+    numberofTables: settings
+});
 
-}());
+    };
+}(jQuery));
 
 
 
