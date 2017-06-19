@@ -58,12 +58,17 @@ Select any div and add floorplan to it like so,
     <div></div>
     <script>
         $('div').floorplan({
-            numofTables: 10, //Number of tables
-            bookedTables: [1,2], //Specify which tables
+            numofTables: 5, //Number of tables
+            bookedTables: [], //Specify which tables, remember: arrays count from 0
             bookedSeats: {
+<<<<<<< refs/remotes/origin/master
                 tableNums: [0, 0, 3], //Be sure to match elements
                 seatNums: [1, 2, 5]
 >>>>>>> Added content to readme.md
+=======
+                tableNums: [], //Be sure to match table elements with seat elements
+                seatNums: [] //Seat elements.
+>>>>>>> Prepared framework for usertest
             }
         });
     </script>

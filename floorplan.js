@@ -110,7 +110,6 @@
             }
             return allSeats;
         }
-            console.log(allSeats);
         allTables = makeTables();
 
         function checkSeats() {
