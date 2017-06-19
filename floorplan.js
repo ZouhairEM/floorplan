@@ -2,7 +2,7 @@
     $.fn.floorplan = function(options) {
 
         var settings = $.extend({
-            numofTables: 3,
+            numofTables: 0,
             bookedTables: [0],
             bookedSeats: {
                 tableNums: [0],
@@ -62,14 +62,6 @@
             return allTables;
         }
 
-    // position: absolute;
-    // font-size: 125%;
-    // top: 50%;
-    // left: 50%;
-    // margin-right: -50%;
-    // transform: translate(-50%, -50%); 
-
-
         function makeSeats(tableXY) {
             var horPosArr = new Array(0, 5, 10);
             for (var j = 0; j < 6; j++) {
@@ -96,6 +88,7 @@
             }
             return allSeats;
         }
+            console.log(allSeats);
         allTables = makeTables();
 
         function checkSeats() {
@@ -107,7 +100,9 @@
                 $(".table" + settings.bookedTables[i] + 'seat' + [3]).fadeTo(settings.duration, 0.10);
                 $(".table" + settings.bookedTables[i] + 'seat' + [4]).fadeTo(settings.duration, 0.10);
                 $(".table" + settings.bookedTables[i] + 'seat' + [5]).fadeTo(settings.duration, 0.10);
+            }
 
+            for(i = 0; i< settings.bookedSeats.seatNums.length; i++){
                 var tN = settings.bookedSeats.tableNums[i],
                     sN = settings.bookedSeats.seatNums[i];
                 $(".table" + tN + 'seat' + sN).fadeTo(settings.duration, 0.10);

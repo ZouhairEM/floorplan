@@ -42,7 +42,7 @@ Select any div and add floorplan to it like so,
     </script>
 ```
 ## Demo
-[mariami.nl/projects/floorplan/index.html](mariami.nl/projects/floorplan/index.html)
+[Live demo](http://mariami.nl/projects/floorplan/index.html)
 
 ## Author(s)
 
