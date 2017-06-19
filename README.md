@@ -71,6 +71,7 @@ Select any div and add floorplan to it like so,
 ## Demo
 <<<<<<< refs/remotes/origin/master
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
 [Live demo](http://mariami.nl/projects/floorplan/index.html)
 =======
 link not yet up
@@ -78,6 +79,9 @@ link not yet up
 =======
 [mariami.nl/projects/floorplan/index.html](mariami.nl/projects/floorplan/index.html)
 >>>>>>> Final readme fix, promise
+=======
+[Live demo](http://mariami.nl/projects/floorplan/index.html)
+>>>>>>> Fixed seats array bug
 
 ## Author(s)
 

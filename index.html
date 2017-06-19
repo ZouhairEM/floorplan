@@ -53,17 +53,23 @@
 </head>
 
 <body>
-    <div></div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+<br>
+<br>
+<br>
+<br>
     <script>
-        $('div').floorplan({
-            numofTables: 10, //Number of tables
-            bookedTables: [1,2], //Specify which tables, remember: arrays count from 0
+        $('#div1').floorplan({
+            numofTables: 3, //Number of tables
+            bookedTables: [0], //Specify which tables, remember: arrays count from 0
             bookedSeats: {
-                tableNums: [0, 0, 3], //Be sure to match elements
-                seatNums: [1, 2, 5]
+                tableNums: [0], //Be sure to match elements
+                seatNums: [0]
             }
         });
     </script>
+<<<<<<< refs/remotes/origin/master
 
 <<<<<<< refs/remotes/origin/master
         makeFloorPlan(x);
@@ -73,6 +79,8 @@
 >>>>>>> Divs create function in new repo
 =======
 >>>>>>> Made it so that it returns options
+=======
+>>>>>>> Fixed seats array bug
 </body>
 
 <<<<<<< refs/remotes/origin/master
