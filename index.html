@@ -11,19 +11,14 @@
 </head>
 
 <body>
-    <div id="div1"></div>
-    <div id="div2"></div>
-<br>
-<br>
-<br>
-<br>
+    <div></div>
     <script>
-        $('#div1').floorplan({
-            numofTables: 3, //Number of tables
-            bookedTables: [0], //Specify which tables, remember: arrays count from 0
+        $('div').floorplan({
+            numofTables: 5, //Number of tables
+            bookedTables: [], //Specify which tables you want to book, remember: arrays count from 0
             bookedSeats: {
-                tableNums: [0], //Be sure to match elements
-                seatNums: [0]
+                tableNums: [], //Be sure to match table elements with seat elements
+                seatNums: [] //Seat elements.
             }
         });
     </script>
