@@ -1,6 +1,8 @@
 # Floorplan
 This is a plugin that allows you to create visualized tables to easily show which tables and seats are already booked for your events.
 
+![alt text](http://oi67.tinypic.com/2dn9tv.jpg)
+
 What is customizable?
 * The number of tables. The default is set to 10.
 * The booked tables. You can specify which tables are fully booked.
@@ -18,25 +20,24 @@ Be sure to include jQuery above the floorplan.js plugin in your head tags.
 
 ### Add the floorplan plugin
 
-Include the plugin within the head tag,
+Include the plugin within the head tag, make sure it's below jQuery.
 
 ```
 <script src="floorplan.js"></script>
 ```
 
 
-### Add floorplan to a div
-Select any div and add floorplan to it like so,
+### Add floorplan
+Add floorplan to your page with this code. You can set your own number of tables with `numOfTables`, book entire tables with `bookedTables` and book individual seats with `seatNums` matching at which tables they're at with `tableNums`. 
 
 ```
-    <div></div>
     <script>
-        $('div').floorplan({
-            numofTables: 5, //Number of tables
-            bookedTables: [], //Specify which tables, remember: arrays count from 0
+        $('body').floorplan({
+            numofTables: 10, //Number of tables
+            bookedTables: [1,5], //Specify which tables, remember: arrays count from 0
             bookedSeats: {
-                tableNums: [], //Be sure to match table elements with seat elements
-                seatNums: [] //Seat elements.
+                tableNums: [8], //Be sure to match table elements with seat elements
+                seatNums: [2] //Seat elements.
             }
         });
     </script>
@@ -51,4 +52,7 @@ Select any div and add floorplan to it like so,
 ## Acknowledgments
 
 * Thank you [Ties](https://github.com/Indoguy) for some help
-* Some code still needs to be made more efficiently
+* Future additions
+    * Some code still needs to be made more efficiently
+    * I wanna work with real JSON objects to load data in
+    * I want to append Floorplan to specific divs, while keeping CSS aspect ratios.

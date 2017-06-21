@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="floorplan.js"></script>
+    <title>
+        Usertest
+    </title>
+</head>
+
+<body>
+<div></div>
+    <script>
+        $('body').floorplan({
+            numofTables: 10, //Number of tables
+            bookedTables: [1,5, 7], //Specify which tables, remember: arrays count from 0
+            bookedSeats: {
+                tableNums: [4,8,9,9], //Be sure to match table elements with seat elements
+                seatNums: [1,2,0,1] //Seat elements.
+            }
+        });
+    </script>
+</body>
+
+</html>

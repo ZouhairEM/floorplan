@@ -2,7 +2,7 @@
     $.fn.floorplan = function(options) {
 
         var settings = $.extend({
-            numofTables: 0,
+            numofTables: 5, //default is set to 5 tables
             bookedTables: [0],
             bookedSeats: {
                 tableNums: [0],
