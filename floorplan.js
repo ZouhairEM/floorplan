@@ -2,23 +2,11 @@
     $.fn.floorplan = function(options) {
 
         var settings = $.extend({
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
-            numofTables: 5, //default is set to 5 tables
-=======
-            numofTables: 3,
->>>>>>> 90% finished, added better style, text and settings in html div
-=======
-            numofTables: 0,
->>>>>>> Fixed seats array bug
-=======
-            numofTables: 5, //default is set to 5 tables
->>>>>>> Added feedback from usertests to framework
-            bookedTables: [0],
+            numofTables: 10,
+            bookedTables: [],
             bookedSeats: {
-                tableNums: [0],
-                seatNums: [0]
+                tableNums: [],
+                seatNums: []
             },
             tableXY: {
                 Xpos: 17,
@@ -74,20 +62,6 @@
             return allTables;
         }
 
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
-=======
-    // position: absolute;
-    // font-size: 125%;
-    // top: 50%;
-    // left: 50%;
-    // margin-right: -50%;
-    // transform: translate(-50%, -50%); 
-
-
->>>>>>> 90% finished, added better style, text and settings in html div
-=======
->>>>>>> Fixed seats array bug
         function makeSeats(tableXY) {
             var horPosArr = new Array(0, 5, 10);
             for (var j = 0; j < 6; j++) {
@@ -125,19 +99,9 @@
                 $(".table" + settings.bookedTables[i] + 'seat' + [3]).fadeTo(settings.duration, 0.10);
                 $(".table" + settings.bookedTables[i] + 'seat' + [4]).fadeTo(settings.duration, 0.10);
                 $(".table" + settings.bookedTables[i] + 'seat' + [5]).fadeTo(settings.duration, 0.10);
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
             }
 
             for(i = 0; i< settings.bookedSeats.seatNums.length; i++){
-=======
-
->>>>>>> 90% finished, added better style, text and settings in html div
-=======
-            }
-
-            for(i = 0; i< settings.bookedSeats.seatNums.length; i++){
->>>>>>> Fixed seats array bug
                 var tN = settings.bookedSeats.tableNums[i],
                     sN = settings.bookedSeats.seatNums[i];
                 $(".table" + tN + 'seat' + sN).fadeTo(settings.duration, 0.10);
