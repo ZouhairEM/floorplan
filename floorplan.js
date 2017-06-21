@@ -4,6 +4,7 @@
         var settings = $.extend({
 <<<<<<< refs/remotes/origin/master
 <<<<<<< refs/remotes/origin/master
+<<<<<<< refs/remotes/origin/master
             numofTables: 5, //default is set to 5 tables
 =======
             numofTables: 3,
@@ -11,6 +12,9 @@
 =======
             numofTables: 0,
 >>>>>>> Fixed seats array bug
+=======
+            numofTables: 5, //default is set to 5 tables
+>>>>>>> Added feedback from usertests to framework
             bookedTables: [0],
             bookedSeats: {
                 tableNums: [0],
